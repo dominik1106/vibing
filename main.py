@@ -1,6 +1,9 @@
 import yt_dlp
 import discord
 from discord.ext.pages import Paginator, Page
+import os
+
+TOKEN = os.environ.get("BOT_TOKEN")
 
 bot = discord.Bot()
 
@@ -261,4 +264,4 @@ async def pause(ctx: discord.ApplicationContext):
     await ctx.respond(embed=embed)
 
 # Run the bot with your token
-bot.run('MTEzNjY3MDI3MjY0NTI1NTIyOA.GdI9dJ.DGiOJzcug-Yka6zLuiolz3QbyYe64RP9ZWdgpA')
+bot.run(TOKEN)
